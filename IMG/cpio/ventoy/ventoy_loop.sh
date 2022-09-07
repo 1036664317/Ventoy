@@ -204,6 +204,8 @@ ventoy_get_os_type() {
             echo 'debian'; return
         elif $GREP -q 'chinauos' /etc/os-release; then
             echo 'debian'; return
+        elif $GREP -q 'anolis' /etc/os-release; then
+            echo 'rhel7'; return
         fi
     fi
     
